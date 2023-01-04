@@ -1,11 +1,12 @@
 import React from 'react';
 import {SafeAreaView, View, StyleSheet} from 'react-native';
+import Recipe from './views/Recipe.js';
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.screen}>
-      <View />
-    </SafeAreaView>
+    <View style={styles.screen}>
+      <Recipe />
+    </View>
   );
 };
 
