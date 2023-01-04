@@ -1,18 +1,14 @@
 import React from 'react';
-import {SafeAreaView, View, StyleSheet} from 'react-native';
+import 'react-native-gesture-handler';
+import {NavigationContainer} from '@react-navigation/native';
+import DrawerNavigator from './navigation/DrawerNavigator';
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.screen}>
-      <View />
-    </SafeAreaView>
+    <NavigationContainer>
+      <DrawerNavigator />
+    </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-  },
-});
 
 export default App;
