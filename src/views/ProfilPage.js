@@ -1,19 +1,64 @@
-import React from 'react';
-import {Text, SafeAreaView, View, StyleSheet, Image} from 'react-native';
+import React, {useState} from 'react';
+import {
+  Text,
+  SafeAreaView,
+  View,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
+import {launchImageLibrary} from 'react-native-image-picker';
 
 const ProfilPage = () => {
+  const [imageUriGallery, setImageUriGallery] = useState('');
+
+  const editPicture = async () => {
+    let options = {};
+
+    try {
+      const response = await launchImageLibrary(options);
+      console.log('Response = ', response);
+      if (response.didCancel) {
+        console.log('User cancelled picker');
+      } else if (response.error) {
+        console.log('PickeR error = ', response.error);
+      } else if (response.TouchableOpacity) {
+        console.log('');
+      } else {
+        setImageUriGallery(response.assets[0].uri.replace('file://', ''));
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   return (
     <SafeAreaView style={styles.screen}>
       <>
         <View style={styles.profilHeader}>
           <Image
-            source={require('../assets/profilLogo.png')}
+            source={require('../assets/logo.jpg')}
             style={styles.profilLogo}
           />
+
           <Image
-            source={require('../assets/profilAvatar.png')}
+            source={
+              imageUriGallery
+                ? {uri: imageUriGallery}
+                : require('../assets/profilAvatar.png')
+            }
+            /*source={require('../assets/profilAvatar.png')}*/
             style={styles.profilAvatar}
           />
+          <View>
+            <TouchableOpacity
+              style={styles.seeAll}
+              onPress={() => {
+                editPicture();
+              }}>
+              <Text style={styles.seeAllText}>Modifier la photo</Text>
+            </TouchableOpacity>
+          </View>
           <Text style={styles.profilName}>Nom de profil</Text>
         </View>
       </>
@@ -49,6 +94,8 @@ const styles = StyleSheet.create({
   profilAvatar: {
     width: 100,
     height: 100,
+    borderRadius: 100,
+    borderWidth: 2,
     marginBottom: 20,
   },
   profilName: {
@@ -75,6 +122,22 @@ const styles = StyleSheet.create({
   imgLogout: {
     width: 15,
     height: 15,
+  },
+  seeAll: {
+    borderWidth: 1,
+    borderRadius: 10,
+    borderColor: '#FB7D8A',
+    marginTop: 0,
+    marginRight: 0,
+    width: 70,
+    height: 38,
+  },
+  seeAllText: {
+    textAlign: 'center',
+    fontSize: 10,
+    padding: 6,
+    color: '#FB7D8A',
+    opacity: 1,
   },
 });
 

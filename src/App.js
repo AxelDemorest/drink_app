@@ -3,11 +3,12 @@ import {SafeAreaView, View, StyleSheet} from 'react-native';
 import Recipe from './views/Recipe.js';
 import Home from './views/Home';
 import Categories from './views/Categories';
+import ProfilPage from './views/ProfilPage.js';
 
 const App = () => {
   return (
     <View style={styles.screen}>
-      <Categories />
+      <ProfilPage />
     </View>
   );
 };

@@ -10,5 +10,5 @@ import Register from './src/views/Register';
 import Recipe from './src/views/Recipe';
 import ProfilPage from './src/views/ProfilPage';
 
-AppRegistry.registerComponent(appName, () => ProfilPage);
+AppRegistry.registerComponent(appName, () => App);
 
