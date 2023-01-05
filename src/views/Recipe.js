@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
   cocktailImage: {
     width: 204,
     height: 248,
-    position: "absolute",
+    position: 'absolute',
     bottom: 60,
     left: 200,
   },
@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
   textItem: {
     fontSize: 12,
     lineHeight: 14,
-    fontWeight: '200',
+    fontWeight: '300',
   },
 });
 
