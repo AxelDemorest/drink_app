@@ -5,18 +5,17 @@ import Home from './views/Home';
 import Categories from './views/Categories';
 import Readme from './views/Readme';
 
+import 'react-native-gesture-handler';
+import {NavigationContainer} from '@react-navigation/native';
+import DrawerNavigator from './components/navigation/DrawerNavigator';
+
 const App = () => {
   return (
-    <View style={styles.screen}>
-      <Readme />
-    </View>
+    <NavigationContainer>
+      <DrawerNavigator />
+    </NavigationContainer>
+
   );
 };
-
-const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-  },
-});
 
 export default App;
