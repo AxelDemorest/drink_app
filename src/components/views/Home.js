@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 const App = () => {
-  const localImage = require('./../assets/backgroundHome.jpg');
+  const localImage = require('../../assets/backgroundHome.jpg');
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -23,7 +23,7 @@ const App = () => {
           pour toutes les occasions !
         </Text>
         <TouchableOpacity style={styles.btnStarted}>
-          <Text style={styles.textTest}>Get Started  ></Text>
+          <Text style={styles.textTest}>Get Started</Text>
         </TouchableOpacity>
       </ImageBackground>
     </View>
