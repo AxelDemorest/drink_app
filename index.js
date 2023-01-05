@@ -7,5 +7,6 @@ import App from './src/App';
 import {name as appName} from './app.json';
 import Login from './src/views/Login';
 import Register from './src/views/Register';
+import Recipe from './src/views/Recipe';
 
-AppRegistry.registerComponent(appName, () => Register);
+AppRegistry.registerComponent(appName, () => Recipe);

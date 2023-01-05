@@ -12,8 +12,8 @@ import {
 } from 'react-native';
 
 const Register = () => {
-  const [email, onChangeEmail] = React.useState('Enter email');
-  const [password, onChangePassword] = React.useState('Enter password');
+  const [email, onChangeEmail] = React.useState('');
+  const [password, onChangePassword] = React.useState('');
   const simpleAlertHandler = () => {
     //function to make simple alert
     alert('Inscription envoyée');
