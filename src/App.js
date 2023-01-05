@@ -1,9 +1,4 @@
 import React from 'react';
-import {SafeAreaView, View, StyleSheet} from 'react-native';
-import Recipe from './views/Recipe.js';
-import Home from './views/Home';
-import Categories from './views/Categories';
-import Readme from './components/views/Readme';
 
 import 'react-native-gesture-handler';
 import {NavigationContainer} from '@react-navigation/native';
