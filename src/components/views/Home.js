@@ -1,14 +1,16 @@
 import React from 'react';
 import {
-  SafeAreaView,
   View,
   StyleSheet,
   Text,
   TouchableOpacity,
   ImageBackground,
 } from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 const App = () => {
+  const navigation = useNavigation();
+
   const localImage = require('../../assets/backgroundHome.jpg');
   return (
     <View style={styles.container}>
@@ -22,7 +24,7 @@ const App = () => {
           L'application unique pour trouver des mélanges de boissons incroyables
           pour toutes les occasions !
         </Text>
-        <TouchableOpacity style={styles.btnStarted}>
+        <TouchableOpacity>
           <Text style={styles.textTest}>Get Started</Text>
         </TouchableOpacity>
       </ImageBackground>

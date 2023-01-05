@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   SafeAreaView,
   View,
@@ -6,23 +5,77 @@ import {
   Text,
   TouchableOpacity,
   ImageBackground,
+  FlatList,
   Image,
   TextInput,
   ScrollView,
 } from 'react-native';
+import React, {useEffect, useState, useMemo} from 'react';
+import axios from 'axios';
+import {useNavigation} from '@react-navigation/native';
 
 const Categories = () => {
+  const [search, setSearch] = useState('');
+  const [drink, setDrink] = useState();
+  const navigation = useNavigation();
+
+  useEffect(() => {
+    axios
+      .get('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007')
+      .then(res => {
+        const key = res.data.drinks;
+
+        setDrink(key);
+      });
+  }, []);
+
+  useEffect(() => {
+    console.log(search);
+    axios
+      .get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search}`)
+      .then(res => {
+        const key = res.data.drinks;
+
+        setDrink(key);
+      });
+  }, [search]);
+
   return (
     <View style={styles.viewCategories}>
       <Image
         style={styles.imageLogo}
-        source={require('./../assets/logo.jpg')}
+        source={{
+          uri: drink.strDrinkThumb,
+        }}
       />
       <TextInput
         style={styles.inputRecherche}
-        value={Text}
+        value={search}
+        onChangeText={setSearch}
         placeholder={'Recherche  ...'}
       />
+      <FlatList
+        data={drink}
+        // style={styles.moviesList}
+        numColumns={2}
+        renderItem={({item}) => {
+          return (
+            <TouchableOpacity
+              onPress={() => navigation.navigate('Recipe', {drink: item})}>
+              <View>
+                <Image
+                  source={{
+                    uri: drink.strDrinkThumb,
+                  }}
+                  style={{width: 35, height: 35, justifyContent: 'flex-end'}}
+                />
+                <Text>{item.strDrink}</Text>
+              </View>
+            </TouchableOpacity>
+          );
+        }}
+      />
+
       <View style={styles.categoriesSee}>
         <Text style={styles.categoriesTitle}>Categories</Text>
         <TouchableOpacity style={styles.seeAll}>
@@ -33,7 +86,9 @@ const Categories = () => {
         <View style={styles.cardCategories}>
           <Image
             style={styles.imageCategories}
-            source={require('./../assets/categories.png')}
+            source={{
+              uri: drink.strDrinkThumb,
+            }}
           />
           <Text style={styles.titleCocktail}>Cocktails</Text>
           <Text style={styles.mixeCocktail}> 50 Mixes </Text>
@@ -42,7 +97,9 @@ const Categories = () => {
         <View style={styles.cardCategories}>
           <Image
             style={styles.imageCategories}
-            source={require('./../assets/categories.png')}
+            source={{
+              uri: drink.strDrinkThumb,
+            }}
           />
           <Text style={styles.titleCocktail}>Cocktails</Text>
           <Text style={styles.mixeCocktail}> 50 Mixes </Text>
@@ -51,7 +108,9 @@ const Categories = () => {
         <View style={styles.cardCategories}>
           <Image
             style={styles.imageCategories}
-            source={require('./../assets/categories.png')}
+            source={{
+              uri: drink.strDrinkThumb,
+            }}
           />
           <Text style={styles.titleCocktail}>Cocktails</Text>
           <Text style={styles.mixeCocktail}> 50 Mixes </Text>
@@ -60,7 +119,9 @@ const Categories = () => {
         <View style={styles.cardCategories}>
           <Image
             style={styles.imageCategories}
-            source={require('./../assets/categories.png')}
+            source={{
+              uri: drink.strDrinkThumb,
+            }}
           />
           <Text style={styles.titleCocktail}>Cocktails</Text>
           <Text style={styles.mixeCocktail}> 50 Mixes </Text>
@@ -69,7 +130,9 @@ const Categories = () => {
         <View style={styles.cardCategories}>
           <Image
             style={styles.imageCategories}
-            source={require('./../assets/categories.png')}
+            source={{
+              uri: drink.strDrinkThumb,
+            }}
           />
           <Text style={styles.titleCocktail}>Cocktails</Text>
           <Text style={styles.mixeCocktail}> 50 Mixes </Text>
@@ -87,18 +150,24 @@ const Categories = () => {
           <Text style={styles.textTitle}>Bleu Moon</Text>
           <Image
             style={styles.imageCocktail}
-            source={require('./../assets/cocktailTest.jpg')}
+            source={{
+              uri: drink.strDrinkThumb,
+            }}
           />
           <Text style={styles.alcool}>Avec ou sans alcool : ...</Text>
           <Text style={styles.verre}>Type de verre : ...</Text>
           <View style={styles.cardBot}>
             <Image
               style={styles.imageLike}
-              source={require('./../assets/like.png')}
+              source={{
+                uri: drink.strDrinkThumb,
+              }}
             />
             <Image
               style={styles.imageNote}
-              source={require('./../assets/note.png')}
+              source={{
+                uri: drink.strDrinkThumb,
+              }}
             />
           </View>
         </View>
@@ -107,18 +176,24 @@ const Categories = () => {
           <Text style={styles.textTitle}>Bleu Moon</Text>
           <Image
             style={styles.imageCocktail}
-            source={require('./../assets/cocktailTest.jpg')}
+            source={{
+              uri: drink.strDrinkThumb,
+            }}
           />
           <Text style={styles.alcool}>Avec ou sans alcool : ...</Text>
           <Text style={styles.verre}>Type de verre : ...</Text>
           <View style={styles.cardBot}>
             <Image
               style={styles.imageLike}
-              source={require('./../assets/like.png')}
+              source={{
+                uri: drink.strDrinkThumb,
+              }}
             />
             <Image
               style={styles.imageNote}
-              source={require('./../assets/note.png')}
+              source={{
+                uri: drink.strDrinkThumb,
+              }}
             />
           </View>
         </View>
@@ -127,18 +202,24 @@ const Categories = () => {
           <Text style={styles.textTitle}>Bleu Moon</Text>
           <Image
             style={styles.imageCocktail}
-            source={require('./../assets/cocktailTest.jpg')}
+            source={{
+              uri: drink.strDrinkThumb,
+            }}
           />
           <Text style={styles.alcool}>Avec ou sans alcool : ...</Text>
           <Text style={styles.verre}>Type de verre : ...</Text>
           <View style={styles.cardBot}>
             <Image
               style={styles.imageLike}
-              source={require('./../assets/like.png')}
+              source={{
+                uri: drink.strDrinkThumb,
+              }}
             />
             <Image
               style={styles.imageNote}
-              source={require('./../assets/note.png')}
+              source={{
+                uri: drink.strDrinkThumb,
+              }}
             />
           </View>
         </View>
@@ -147,18 +228,24 @@ const Categories = () => {
           <Text style={styles.textTitle}>Bleu Moon</Text>
           <Image
             style={styles.imageCocktail}
-            source={require('./../assets/cocktailTest.jpg')}
+            source={{
+              uri: drink.strDrinkThumb,
+            }}
           />
           <Text style={styles.alcool}>Avec ou sans alcool : ...</Text>
           <Text style={styles.verre}>Type de verre : ...</Text>
           <View style={styles.cardBot}>
             <Image
               style={styles.imageLike}
-              source={require('./../assets/like.png')}
+              source={{
+                uri: drink.strDrinkThumb,
+              }}
             />
             <Image
               style={styles.imageNote}
-              source={require('./../assets/note.png')}
+              source={{
+                uri: drink.strDrinkThumb,
+              }}
             />
           </View>
         </View>
@@ -167,22 +254,27 @@ const Categories = () => {
           <Text style={styles.textTitle}>Bleu Moon</Text>
           <Image
             style={styles.imageCocktail}
-            source={require('./../assets/cocktailTest.jpg')}
+            source={{
+              uri: drink.strDrinkThumb,
+            }}
           />
           <Text style={styles.alcool}>Avec ou sans alcool : ...</Text>
           <Text style={styles.verre}>Type de verre : ...</Text>
           <View style={styles.cardBot}>
             <Image
               style={styles.imageLike}
-              source={require('./../assets/like.png')}
+              source={{
+                uri: drink.strDrinkThumb,
+              }}
             />
             <Image
               style={styles.imageNote}
-              source={require('./../assets/note.png')}
+              source={{
+                uri: drink.strDrinkThumb,
+              }}
             />
           </View>
         </View>
-
       </ScrollView>
     </View>
   );
