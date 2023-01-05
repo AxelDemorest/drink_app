@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+
 import {
-  SafeAreaView,
   View,
   StyleSheet,
   Text,
@@ -8,8 +8,26 @@ import {
   ImageBackground,
   Image,
 } from 'react-native';
+import axios from 'axios';
 
-const Recipe = () => {
+const Recipe = props => {
+  const [drink, setDrink] = useState();
+
+  useEffect(() => {
+    axios
+      .get('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007')
+      .then(res => {
+        const key = res.data.drinks[0];
+        console.log(typeof key);
+        console.log(key);
+        setDrink(key);
+      });
+  }, []);
+
+  if (!drink) {
+    return <Text>Chargement de la page...</Text>;
+  }
+
   const localImage = require('../assets/recipeBg.png');
   return (
     <View style={styles.screen}>
@@ -19,28 +37,24 @@ const Recipe = () => {
         style={styles.bgStyle}>
         <>
           <View style={styles.title}>
-            <Text style={styles.cocktailName}>Mojito</Text>
-            <Text style={styles.cocktailDescription}>
-              A Mojito alcohol, its combination of sweet and citrusy flavors
-              makes it the summers go to.
-            </Text>
+            <Text style={styles.cocktailName}>{drink.strDrink}</Text>
           </View>
         </>
 
         <>
           <View style={styles.infoCocktail}>
-            <Text style={styles.infoTime}>Temps de preparation</Text>
-            <Text style={styles.time}>25 min</Text>
-            <Text style={styles.infoDificulty}>Difficulté</Text>
-            <Text style={styles.dificulty}>Intermédiaire</Text>
-            <Text style={styles.infoCategory}>Catégorie</Text>
-            <Text style={styles.category}>Doux</Text>
-            <Text style={styles.infoServes}>Nombre de verre</Text>
-            <Text style={styles.serves}>2</Text>
+            <Text style={styles.infoDificulty}>Catégorie</Text>
+            <Text style={styles.dificulty}>{drink.strCategory}</Text>
+            <Text style={styles.infoServes}>Type de verre</Text>
+            <Text style={styles.serves}>{drink.strGlass}</Text>
+            <Text style={styles.infoCategory}>Instruction</Text>
+            <Text style={styles.cocktailDescription}>
+              {drink.strInstructions}
+            </Text>
           </View>
           <View>
             <Image
-              source={require('../assets/mojiito.png')}
+              source={{uri: drink.strDrinkThumb}}
               resizeMode={'cover'}
               style={styles.cocktailImage}
             />
@@ -56,20 +70,18 @@ const Recipe = () => {
         <>
           <View style={styles.flatList}>
             <FlatList
-              data={[
-                'Menthe',
-                'Rhum',
-                'Citron',
-                'Jus de citron',
-                'Glaçon',
-                'Eau gazeuse',
-              ]}
+              data={(drink.strIngredient1, drink.strIngredient1)}
               horizontal
               renderItem={({item}) => {
                 return (
-                  <View style={styles.baseItem}>
-                    <Text style={styles.textItem}>{item}</Text>
-                  </View>
+                  <>
+                    <View style={styles.baseItem}>
+                      <Text style={styles.textItem}>
+                        {drink.strIngredient1}
+                      </Text>
+                      <Text style={styles.textItem}>{drink.strMeasure1}</Text>
+                    </View>
+                  </>
                 );
               }}
             />
