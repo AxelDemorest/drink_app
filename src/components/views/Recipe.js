@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 
 const Recipe = () => {
-  const localImage = require('../assets/recipeBg.png');
+  const localImage = require('../../assets/recipeBg.png');
   return (
     <View style={styles.screen}>
       <ImageBackground
@@ -40,7 +40,7 @@ const Recipe = () => {
           </View>
           <View>
             <Image
-              source={require('../assets/mojiito.png')}
+              source={require('../../assets/mojiito.png')}
               resizeMode={'cover'}
               style={styles.cocktailImage}
             />
@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
   cocktailImage: {
     width: 204,
     height: 248,
-    position: "absolute",
+    position: 'absolute',
     bottom: 60,
     left: 200,
   },
