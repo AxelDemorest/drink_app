@@ -3,6 +3,7 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import Home from '../views/Home';
 import Recipe from '../views/Recipe';
 import CustomDrawer from '../others/CustomDrawer';
+import Categories from '../views/Categories';
 
 const Drawer = createDrawerNavigator();
 
@@ -16,6 +17,7 @@ const DrawerNavigator = () => {
         drawerActiveTintColor: 'black',
         drawerInactiveTintColor: 'white',
         drawerLabelStyle: {
+          fontFamily: 'Poppins-Bold',
           fontWeight: '600',
           fontSize: 25,
           paddingLeft: 15,
@@ -23,8 +25,16 @@ const DrawerNavigator = () => {
         },
       }}
       initialRouteName="Home">
-      <Drawer.Screen name="Accueil" component={Home} />
-      <Drawer.Screen name="Cocktail" component={Recipe} />
+      <Drawer.Screen
+        name="Accueil"
+        component={Home}
+        options={{swipeEnabled: false}}
+      />
+      <Drawer.Screen
+        name="Categories"
+        component={Categories}
+        options={{drawerLabel: 'Catégories'}}
+      />
       <Drawer.Screen name="Cocktail2" component={Recipe} />
       <Drawer.Screen name="Cocktail3" component={Recipe} />
       <Drawer.Screen name="Cocktail4" component={Recipe} />

@@ -28,7 +28,7 @@ const Recipe = props => {
     return <Text>Chargement de la page...</Text>;
   }
 
-  const localImage = require('../../assets/recipeBg.png');
+  const localImage = require('../../assets/images/recipeBg.png');
   return (
     <View style={styles.screen}>
       <ImageBackground

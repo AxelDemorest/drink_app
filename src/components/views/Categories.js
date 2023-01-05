@@ -16,7 +16,7 @@ const Categories = () => {
     <View style={styles.viewCategories}>
       <Image
         style={styles.imageLogo}
-        source={require('./../assets/logo.jpg')}
+        source={require('../../assets/images/logo.jpg')}
       />
       <TextInput
         style={styles.inputRecherche}
@@ -33,7 +33,7 @@ const Categories = () => {
         <View style={styles.cardCategories}>
           <Image
             style={styles.imageCategories}
-            source={require('./../assets/categories.png')}
+            source={require('../../assets/images/categories.png')}
           />
           <Text style={styles.titleCocktail}>Cocktails</Text>
           <Text style={styles.mixeCocktail}> 50 Mixes </Text>
@@ -42,7 +42,7 @@ const Categories = () => {
         <View style={styles.cardCategories}>
           <Image
             style={styles.imageCategories}
-            source={require('./../assets/categories.png')}
+            source={require('../../assets/images/categories.png')}
           />
           <Text style={styles.titleCocktail}>Cocktails</Text>
           <Text style={styles.mixeCocktail}> 50 Mixes </Text>
@@ -51,7 +51,7 @@ const Categories = () => {
         <View style={styles.cardCategories}>
           <Image
             style={styles.imageCategories}
-            source={require('./../assets/categories.png')}
+            source={require('../../assets/images/categories.png')}
           />
           <Text style={styles.titleCocktail}>Cocktails</Text>
           <Text style={styles.mixeCocktail}> 50 Mixes </Text>
@@ -60,7 +60,7 @@ const Categories = () => {
         <View style={styles.cardCategories}>
           <Image
             style={styles.imageCategories}
-            source={require('./../assets/categories.png')}
+            source={require('../../assets/images/categories.png')}
           />
           <Text style={styles.titleCocktail}>Cocktails</Text>
           <Text style={styles.mixeCocktail}> 50 Mixes </Text>
@@ -69,7 +69,7 @@ const Categories = () => {
         <View style={styles.cardCategories}>
           <Image
             style={styles.imageCategories}
-            source={require('./../assets/categories.png')}
+            source={require('../../assets/images/categories.png')}
           />
           <Text style={styles.titleCocktail}>Cocktails</Text>
           <Text style={styles.mixeCocktail}> 50 Mixes </Text>
@@ -87,18 +87,18 @@ const Categories = () => {
           <Text style={styles.textTitle}>Bleu Moon</Text>
           <Image
             style={styles.imageCocktail}
-            source={require('./../assets/cocktailTest.jpg')}
+            source={require('../../assets/images/cocktailTest.jpg')}
           />
           <Text style={styles.alcool}>Avec ou sans alcool : ...</Text>
           <Text style={styles.verre}>Type de verre : ...</Text>
           <View style={styles.cardBot}>
             <Image
               style={styles.imageLike}
-              source={require('./../assets/like.png')}
+              source={require('../../assets/images/like.png')}
             />
             <Image
               style={styles.imageNote}
-              source={require('./../assets/note.png')}
+              source={require('../../assets/images/note.png')}
             />
           </View>
         </View>
@@ -107,18 +107,18 @@ const Categories = () => {
           <Text style={styles.textTitle}>Bleu Moon</Text>
           <Image
             style={styles.imageCocktail}
-            source={require('./../assets/cocktailTest.jpg')}
+            source={require('../../assets/images/cocktailTest.jpg')}
           />
           <Text style={styles.alcool}>Avec ou sans alcool : ...</Text>
           <Text style={styles.verre}>Type de verre : ...</Text>
           <View style={styles.cardBot}>
             <Image
               style={styles.imageLike}
-              source={require('./../assets/like.png')}
+              source={require('../../assets/images/like.png')}
             />
             <Image
               style={styles.imageNote}
-              source={require('./../assets/note.png')}
+              source={require('../../assets/images/note.png')}
             />
           </View>
         </View>
@@ -127,18 +127,18 @@ const Categories = () => {
           <Text style={styles.textTitle}>Bleu Moon</Text>
           <Image
             style={styles.imageCocktail}
-            source={require('./../assets/cocktailTest.jpg')}
+            source={require('../../assets/images/cocktailTest.jpg')}
           />
           <Text style={styles.alcool}>Avec ou sans alcool : ...</Text>
           <Text style={styles.verre}>Type de verre : ...</Text>
           <View style={styles.cardBot}>
             <Image
               style={styles.imageLike}
-              source={require('./../assets/like.png')}
+              source={require('../../assets/images/like.png')}
             />
             <Image
               style={styles.imageNote}
-              source={require('./../assets/note.png')}
+              source={require('../../assets/images/note.png')}
             />
           </View>
         </View>
@@ -147,18 +147,18 @@ const Categories = () => {
           <Text style={styles.textTitle}>Bleu Moon</Text>
           <Image
             style={styles.imageCocktail}
-            source={require('./../assets/cocktailTest.jpg')}
+            source={require('../../assets/images/cocktailTest.jpg')}
           />
           <Text style={styles.alcool}>Avec ou sans alcool : ...</Text>
           <Text style={styles.verre}>Type de verre : ...</Text>
           <View style={styles.cardBot}>
             <Image
               style={styles.imageLike}
-              source={require('./../assets/like.png')}
+              source={require('../../assets/images/like.png')}
             />
             <Image
               style={styles.imageNote}
-              source={require('./../assets/note.png')}
+              source={require('../../assets/images/note.png')}
             />
           </View>
         </View>
@@ -167,22 +167,21 @@ const Categories = () => {
           <Text style={styles.textTitle}>Bleu Moon</Text>
           <Image
             style={styles.imageCocktail}
-            source={require('./../assets/cocktailTest.jpg')}
+            source={require('../../assets/images/cocktailTest.jpg')}
           />
           <Text style={styles.alcool}>Avec ou sans alcool : ...</Text>
           <Text style={styles.verre}>Type de verre : ...</Text>
           <View style={styles.cardBot}>
             <Image
               style={styles.imageLike}
-              source={require('./../assets/like.png')}
+              source={require('../../assets/images/like.png')}
             />
             <Image
               style={styles.imageNote}
-              source={require('./../assets/note.png')}
+              source={require('../../assets/images/note.png')}
             />
           </View>
         </View>
-
       </ScrollView>
     </View>
   );
