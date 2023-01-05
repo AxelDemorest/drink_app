@@ -110,7 +110,6 @@ const styles = StyleSheet.create({
   },
   viewContinue: {
     marginTop: 20,
-    fontWeight: 'lighter',
     fontSize: 15,
     color: 'grey',
     marginLeft: '10%',
