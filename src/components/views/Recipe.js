@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
   },
   bgStyle: {
     flex: 1,
-    marginBottom: 270,
+    marginBottom: 200,
   },
   title: {
     alignItems: 'center',
@@ -111,11 +111,11 @@ const styles = StyleSheet.create({
     lineHeight: 44,
   },
   cocktailDescription: {
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: '200',
     lineHeight: 20,
-    textAlign: 'center',
     marginBottom: 60,
+    marginRight: 195,
   },
   infoCocktail: {
     justifyContent: 'flex-start',
@@ -137,6 +137,7 @@ const styles = StyleSheet.create({
     fontWeight: '300',
     lineHeight: 44,
     color: '#82B70B',
+    marginTop: -30,
   },
   dificulty: {
     fontSize: 32,
@@ -163,7 +164,7 @@ const styles = StyleSheet.create({
     color: '#FB7D8A',
   },
   serves: {
-    fontSize: 32,
+    fontSize: 25,
     fontWeight: '700',
     lineHeight: 44,
     color: '#FB7D8A',
@@ -172,7 +173,7 @@ const styles = StyleSheet.create({
     width: 204,
     height: 248,
     position: 'absolute',
-    bottom: 60,
+    bottom: 90,
     left: 200,
   },
 
@@ -185,9 +186,11 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     lineHeight: 44,
     color: '#FB7D8A',
+    marginTop: -40,
   },
   flatList: {
     width: 380,
+    marginTop: 5,
   },
   baseItem: {
     width: 150,
