@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   },
   viewContinue: {
     marginTop: 20,
-    fontWeight: 'lighter',
+    fontWeight: '500',
     fontSize: 15,
     color: 'grey',
     marginLeft: '10%',

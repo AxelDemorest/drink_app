@@ -206,7 +206,7 @@ const styles = StyleSheet.create({
   textItem: {
     fontSize: 12,
     lineHeight: 14,
-    fontWeight: '200',
+    fontWeight: '300',
   },
 });
 
