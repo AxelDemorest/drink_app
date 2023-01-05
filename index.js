@@ -9,7 +9,7 @@ import Login from './src/views/Login';
 import Register from './src/views/Register';
 import Recipe from './src/views/Recipe';
 import ProfilPage from './src/views/ProfilPage';
-import Readme from './src/views/Readme';
+import Readme from './src/components/views/Readme';
 
 
 AppRegistry.registerComponent(appName, () => App);
