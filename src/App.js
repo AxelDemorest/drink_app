@@ -3,11 +3,12 @@ import {SafeAreaView, View, StyleSheet} from 'react-native';
 import Recipe from './views/Recipe.js';
 import Home from './views/Home';
 import Categories from './views/Categories';
+import Readme from './views/Readme';
 
 const App = () => {
   return (
     <View style={styles.screen}>
-      <Categories />
+      <Readme />
     </View>
   );
 };
