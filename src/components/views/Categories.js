@@ -18,13 +18,12 @@ const Categories = () => {
   const [search, setSearch] = useState('');
   const [drink, setDrink] = useState();
   const navigation = useNavigation();
-
   useEffect(() => {
     axios
       .get('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007')
       .then(res => {
         const key = res.data.drinks;
-
+        console.log(key);
         setDrink(key);
       });
   }, []);
