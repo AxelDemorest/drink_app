@@ -9,10 +9,10 @@ import {
   Image,
   ScrollView,
 } from 'react-native';
-import localImage from '../assets/recipeBg.png';
+import localImage from '../../assets/recipeBg.png';
 
 const Readme = () => {
-  const localImage = require('../assets/recipeBg2.png');
+  const localImage = require('../../assets/recipeBg2.png');
   return (
     <ScrollView style={styles.container}>
       <ImageBackground
@@ -21,7 +21,7 @@ const Readme = () => {
         style={styles.bgStyle}>
         <Image
           style={styles.imageLogo}
-          source={require('./../assets/logo.jpg')}
+          source={require('../../assets/logo.jpg')}
         />
         <Text style={styles.slogan}>L'alCOOL c'est pas COOL ?</Text>
         <Text style={styles.team}>L'EKIP :</Text>
@@ -29,27 +29,27 @@ const Readme = () => {
         <View style={styles.teamDescription}>
           <Image
             style={styles.picture}
-            source={require('./../assets/alexis.jpg')}
+            source={require('../../assets/alexis.jpg')}
           />
 
           <Image
             style={styles.picture}
-            source={require('./../assets/merwan.png')}
+            source={require('../../assets/merwan.png')}
           />
 
           <Image
             style={styles.picture}
-            source={require('./../assets/axel.jpg')}
+            source={require('../../assets/axel.jpg')}
           />
 
           <Image
             style={styles.picture}
-            source={require('./../assets/oceane.jpg')}
+            source={require('../../assets/oceane.jpg')}
           />
         </View>
         <Image
           style={styles.picture2}
-          source={require('./../assets/gauthier.jpg')}
+          source={require('../../assets/gauthier.jpg')}
         />
         <Text style={styles.team}>Le Projet :</Text>
         <Text style={styles.description}>DRINK l'application révolutionnaire des cocktail. Retrouver tout les cocktail, avec leurs composotions et toutes les notes et les avis de nos clients. Créée un compte sur notre applications afin d'être notifier de toutes nos nouveauté. ET n'oubliez pas vaux mieux de l'alcool avaler que recracher ...</Text>
