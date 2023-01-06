@@ -1,4 +1,7 @@
 import React, {useState, useRef} from 'react';
+import {GoogleSignin} from '@react-native-google-signin/google-signin';
+import auth from '@react-native-firebase/auth';
+import {StackActions} from '@react-navigation/native';
 
 import {
   SafeAreaView,
@@ -10,14 +13,32 @@ import {
   TouchableOpacity,
   Modal,
 } from 'react-native';
+import {storeData} from '../../helpers/data.helper';
 
-const Login = () => {
+const Login = props => {
+  const {navigation} = props;
   const [email, onChangeEmail] = React.useState('');
   const [password, onChangePassword] = React.useState('');
   const simpleAlertHandler = () => {
     //function to make simple alert
     alert('Inscription envoyée');
   };
+
+  const onGoogleButtonPress = async () => {
+    const {idToken} = await GoogleSignin.signIn();
+    const googleCredential = auth.GoogleAuthProvider.credential(idToken);
+    const user = await auth().signInWithCredential(googleCredential);
+
+    try {
+      await storeData('user', user);
+      navigation.dispatch(StackActions.replace('Root'));
+    } catch (e) {}
+  };
+
+  GoogleSignin.configure({
+    webClientId:
+      '460241381805-jpbs2bhn97nhbvkdjn7unofefocp3j1j.apps.googleusercontent.com',
+  });
 
   return (
     <SafeAreaView style={styles.screen}>
@@ -49,7 +70,13 @@ const Login = () => {
           <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
         </View>
 
-        <TouchableOpacity style={styles.touchableOpacityGoogle}>
+        <TouchableOpacity
+          style={styles.touchableOpacityGoogle}
+          onPress={() =>
+            onGoogleButtonPress().then(() =>
+              console.log('Signed in with Google!'),
+            )
+          }>
           <Image
             source={{
               uri: 'https://img.freepik.com/icones-gratuites/rechercher_318-265146.jpg?w=2000',

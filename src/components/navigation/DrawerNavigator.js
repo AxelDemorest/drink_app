@@ -25,12 +25,7 @@ const DrawerNavigator = () => {
           margin: 0,
         },
       }}
-      initialRouteName="Home">
-      <Drawer.Screen
-        name="Accueil"
-        component={Home}
-        options={{swipeEnabled: false}}
-      />
+      initialRouteName="Categories">
       <Drawer.Screen
         name="Categories"
         component={Categories}
