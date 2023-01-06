@@ -22,7 +22,7 @@ const Categories = () => {
     axios
       .get('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007')
       .then(res => {
-        const key = res.data.drinks;
+        const key = res.data.drinks[0];
         console.log(key);
         setDrink(key);
       });
@@ -39,6 +39,10 @@ const Categories = () => {
       });
   }, [search]);
 
+  if (!drink) {
+    return <Text>Chargement de la page</Text>;
+  }
+
   return (
     <View style={styles.viewCategories}>
       <Image
@@ -53,27 +57,30 @@ const Categories = () => {
         onChangeText={setSearch}
         placeholder={'Recherche  ...'}
       />
-      <FlatList
-        data={drink}
-        // style={styles.moviesList}
-        numColumns={2}
-        renderItem={({item}) => {
-          return (
-            <TouchableOpacity
-              onPress={() => navigation.navigate('Recipe', {drink: item})}>
-              <View>
-                <Image
-                  source={{
-                    uri: drink.strDrinkThumb,
-                  }}
-                  style={{width: 35, height: 35, justifyContent: 'flex-end'}}
-                />
-                <Text>{item.strDrink}</Text>
-              </View>
-            </TouchableOpacity>
-          );
-        }}
-      />
+      {search && (
+        <FlatList
+          style={{maxHeight: 100}}
+          data={drink}
+          // style={styles.moviesList}
+          numColumns={2}
+          renderItem={({item}) => {
+            return (
+              <TouchableOpacity
+                onPress={() => navigation.navigate('Recipe', {drink: item})}>
+                <View>
+                  <Image
+                    source={{
+                      uri: drink.strDrinkThumb,
+                    }}
+                    style={{width: 35, height: 35, justifyContent: 'flex-end'}}
+                  />
+                  <Text>{item.strDrink}</Text>
+                </View>
+              </TouchableOpacity>
+            );
+          }}
+        />
+      )}
 
       <View style={styles.categoriesSee}>
         <Text style={styles.categoriesTitle}>Categories</Text>
