@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   ImageBackground,
 } from 'react-native';
-import {useNavigation} from '@react-navigation/native';
+import {StackActions, useNavigation} from '@react-navigation/native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const App = () => {
@@ -28,7 +28,7 @@ const App = () => {
         <TouchableOpacity
           style={styles.btnStarted}
           onPress={() => {
-            navigation.navigate('Login');
+            navigation.dispatch(StackActions.replace('Login'));
           }}>
           <Text style={styles.textTest}>Get Started</Text>
           <MaterialIcons name="arrow-forward-ios" size={15} color={'#fff'} />
