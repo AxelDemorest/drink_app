@@ -4,6 +4,7 @@ import DrawerNavigator from './DrawerNavigator';
 import Home from '../views/Home';
 import Login from '../views/Login';
 import Categories from '../views/Categories';
+import Recipe from '../views/Recipe';
 
 const Stack = createStackNavigator();
 
@@ -17,6 +18,7 @@ const StackNavigator = () => {
       <Stack.Screen name="Root" component={DrawerNavigator} />
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Recipe" component={Recipe} />
       <Stack.Screen name="Categories" component={Categories} />
     </Stack.Navigator>
   );

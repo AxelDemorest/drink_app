@@ -12,17 +12,20 @@ import axios from 'axios';
 
 const Recipe = props => {
   const [drink, setDrink] = useState();
+  const {drinkItem} = props.route.params;
 
   useEffect(() => {
     axios
-      .get('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007')
+      .get(
+        `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkItem.idDrink}`,
+      )
       .then(res => {
         const key = res.data.drinks[0];
         console.log(typeof key);
         console.log(key);
         setDrink(key);
       });
-  }, []);
+  }, [drinkItem.idDrink]);
 
   if (!drink) {
     return <Text>Chargement de la page...</Text>;
@@ -76,10 +79,16 @@ const Recipe = props => {
                 return (
                   <>
                     <View style={styles.baseItem}>
-                      <Text style={styles.textItem}>
-                        {drink.strIngredient1}
-                      </Text>
-                      <Text style={styles.textItem}>{drink.strMeasure1}</Text>
+                      <Image
+                        source={require('../../assets/images/natural-ingredients.png')}
+                        style={{width: 70, height: 70}}
+                      />
+                      <View>
+                        <Text style={styles.textItem}>
+                          {drink.strIngredient1}
+                        </Text>
+                        <Text style={styles.textItem}>{drink.strMeasure1}</Text>
+                      </View>
                     </View>
                   </>
                 );
@@ -195,15 +204,16 @@ const styles = StyleSheet.create({
   baseItem: {
     width: 150,
     height: 150,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'flex-end',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
     borderRadius: 70,
     backgroundColor: '#FEF9E4',
     borderWidth: 1.5,
     borderColor: '#FBE897',
     marginLeft: 5,
     marginTop: 20,
+    paddingTop: 15,
     paddingBottom: 15,
   },
   textItem: {

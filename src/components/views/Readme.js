@@ -1,15 +1,12 @@
 import React from 'react';
 import {
-  SafeAreaView,
   View,
   StyleSheet,
   Text,
-  TouchableOpacity,
   ImageBackground,
   Image,
   ScrollView,
 } from 'react-native';
-import localImage from '../../assets/recipeBg.png';
 
 const Readme = () => {
   const localImage = require('../../assets/recipeBg2.png');
@@ -19,12 +16,9 @@ const Readme = () => {
         source={localImage}
         resizeMode={'cover'}
         style={styles.bgStyle}>
-        <Image
-          style={styles.imageLogo}
-          source={require('../../assets/logo.jpg')}
-        />
-        <Text style={styles.slogan}>L'alCOOL c'est pas COOL ?</Text>
-        <Text style={styles.team}>L'EKIP :</Text>
+        <Image />
+        <Text style={styles.slogan}>L'ALCOOL c'est pas COOL ?</Text>
+        <Text style={styles.team}>L'équipe :</Text>
         <View style={styles.imageTeam} />
         <View style={styles.teamDescription}>
           <Image
@@ -52,8 +46,13 @@ const Readme = () => {
           source={require('../../assets/gauthier.jpg')}
         />
         <Text style={styles.team}>Le Projet :</Text>
-        <Text style={styles.description}>DRINK l'application révolutionnaire des cocktail. Retrouver tout les cocktail, avec leurs composotions et toutes les notes et les avis de nos clients. Créée un compte sur notre applications afin d'être notifier de toutes nos nouveauté. ET n'oubliez pas vaux mieux de l'alcool avaler que recracher ...</Text>
-
+        <Text style={styles.description}>
+          DRINK l'application révolutionnaire des cocktails. Retrouvez tous les
+          cocktail, avec leurs compositions et toutes les notes et les avis de
+          nos clients. Créez un compte sur notre applications afin d'être
+          notifié de toutes nos nouveautés. ET n'oubliez pas, vaut mieux de
+          l'alcool avalé que recraché ...
+        </Text>
       </ImageBackground>
     </ScrollView>
   );
@@ -62,6 +61,7 @@ const Readme = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#fff',
   },
   imageLogo: {
     marginTop: 45,

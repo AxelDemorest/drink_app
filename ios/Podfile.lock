@@ -112,7 +112,6 @@ PODS:
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default (= 0.70.6)
     - React-cxxreact (= 0.70.6)
-    - React-hermes (= 0.70.6)
     - React-jsi (= 0.70.6)
     - React-jsiexecutor (= 0.70.6)
     - React-perflogger (= 0.70.6)
@@ -122,7 +121,6 @@ PODS:
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default
     - React-cxxreact (= 0.70.6)
-    - React-hermes (= 0.70.6)
     - React-jsi (= 0.70.6)
     - React-jsiexecutor (= 0.70.6)
     - React-perflogger (= 0.70.6)
@@ -131,7 +129,6 @@ PODS:
     - glog
     - RCT-Folly (= 2021.07.22.00)
     - React-cxxreact (= 0.70.6)
-    - React-hermes (= 0.70.6)
     - React-jsi (= 0.70.6)
     - React-jsiexecutor (= 0.70.6)
     - React-perflogger (= 0.70.6)
@@ -142,7 +139,6 @@ PODS:
     - React-Core/Default (= 0.70.6)
     - React-Core/RCTWebSocket (= 0.70.6)
     - React-cxxreact (= 0.70.6)
-    - React-hermes (= 0.70.6)
     - React-jsi (= 0.70.6)
     - React-jsiexecutor (= 0.70.6)
     - React-jsinspector (= 0.70.6)
@@ -153,7 +149,6 @@ PODS:
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default
     - React-cxxreact (= 0.70.6)
-    - React-hermes (= 0.70.6)
     - React-jsi (= 0.70.6)
     - React-jsiexecutor (= 0.70.6)
     - React-perflogger (= 0.70.6)
@@ -163,7 +158,6 @@ PODS:
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default
     - React-cxxreact (= 0.70.6)
-    - React-hermes (= 0.70.6)
     - React-jsi (= 0.70.6)
     - React-jsiexecutor (= 0.70.6)
     - React-perflogger (= 0.70.6)
@@ -173,7 +167,6 @@ PODS:
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default
     - React-cxxreact (= 0.70.6)
-    - React-hermes (= 0.70.6)
     - React-jsi (= 0.70.6)
     - React-jsiexecutor (= 0.70.6)
     - React-perflogger (= 0.70.6)
@@ -183,7 +176,6 @@ PODS:
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default
     - React-cxxreact (= 0.70.6)
-    - React-hermes (= 0.70.6)
     - React-jsi (= 0.70.6)
     - React-jsiexecutor (= 0.70.6)
     - React-perflogger (= 0.70.6)
@@ -193,7 +185,6 @@ PODS:
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default
     - React-cxxreact (= 0.70.6)
-    - React-hermes (= 0.70.6)
     - React-jsi (= 0.70.6)
     - React-jsiexecutor (= 0.70.6)
     - React-perflogger (= 0.70.6)
@@ -203,7 +194,6 @@ PODS:
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default
     - React-cxxreact (= 0.70.6)
-    - React-hermes (= 0.70.6)
     - React-jsi (= 0.70.6)
     - React-jsiexecutor (= 0.70.6)
     - React-perflogger (= 0.70.6)
@@ -213,7 +203,6 @@ PODS:
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default
     - React-cxxreact (= 0.70.6)
-    - React-hermes (= 0.70.6)
     - React-jsi (= 0.70.6)
     - React-jsiexecutor (= 0.70.6)
     - React-perflogger (= 0.70.6)
@@ -223,7 +212,6 @@ PODS:
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default
     - React-cxxreact (= 0.70.6)
-    - React-hermes (= 0.70.6)
     - React-jsi (= 0.70.6)
     - React-jsiexecutor (= 0.70.6)
     - React-perflogger (= 0.70.6)
@@ -233,7 +221,6 @@ PODS:
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default
     - React-cxxreact (= 0.70.6)
-    - React-hermes (= 0.70.6)
     - React-jsi (= 0.70.6)
     - React-jsiexecutor (= 0.70.6)
     - React-perflogger (= 0.70.6)
@@ -243,7 +230,6 @@ PODS:
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default (= 0.70.6)
     - React-cxxreact (= 0.70.6)
-    - React-hermes (= 0.70.6)
     - React-jsi (= 0.70.6)
     - React-jsiexecutor (= 0.70.6)
     - React-perflogger (= 0.70.6)
@@ -600,7 +586,7 @@ SPEC CHECKSUMS:
   React-bridging: 572502ec59c9de30309afdc4932e278214288913
   React-callinvoker: 6b708b79c69f3359d42f1abb4663f620dbd4dadf
   React-Codegen: 74e1cd7cee692a8b983c18df3274b5e749de07c8
-  React-Core: a3c78c95c84ea6f41dbbc600855f51f24c055e20
+  React-Core: b587d0a624f9611b0e032505f3d6f25e8daa2bee
   React-CoreModules: c6ff48b985e7aa622e82ca51c2c353c7803eb04e
   React-cxxreact: ade3d9e63c599afdead3c35f8a8bd12b3da6730b
   React-hermes: ed09ae33512bbb8d31b2411778f3af1a2eb681a1

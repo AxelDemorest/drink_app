@@ -4,7 +4,8 @@ import Home from '../views/Home';
 import Recipe from '../views/Recipe';
 import CustomDrawer from '../others/CustomDrawer';
 import Categories from '../views/Categories';
-import Login from "../views/Login";
+import Login from '../views/Login';
+import Readme from '../views/Readme';
 
 const Drawer = createDrawerNavigator();
 
@@ -31,9 +32,11 @@ const DrawerNavigator = () => {
         component={Categories}
         options={{drawerLabel: 'Catégories'}}
       />
-      <Drawer.Screen name="Cocktail2" component={Recipe} />
-      <Drawer.Screen name="Login" component={Login} />
-      <Drawer.Screen name="Cocktail4" component={Recipe} />
+      <Drawer.Screen
+        name="Readme"
+        component={Readme}
+        options={{drawerLabel: 'À propos'}}
+      />
     </Drawer.Navigator>
   );
 };

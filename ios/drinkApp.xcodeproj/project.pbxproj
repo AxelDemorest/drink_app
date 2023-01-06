@@ -22,7 +22,7 @@
 		66274C1B23BC4706967BF159 /* DancingScript-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2EC83B4752444B5B4B5DD56 /* DancingScript-SemiBold.ttf */; };
 		70B2AA79BD8E4F1D9B035A3C /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB38C5A34E3D481AAC53A7C8 /* Poppins-ExtraBold.ttf */; };
 		73951D192BE84112B28BEDE8 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AE06ED98F3B4FF0A6885719 /* Poppins-Light.ttf */; };
-		7751674429679164004EE704 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7751674329679164004EE704 /* GoogleService-Info.plist */; };
+		774D773629684696007A5C42 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 774D773529684696007A5C42 /* GoogleService-Info.plist */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		85ABB92D2B104CBEAB971674 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 278F426ADCF14AF8B615D10C /* Poppins-Thin.ttf */; };
 		9037F2E6841740D4B4024D4D /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9194535C2EBE4192AA15015F /* Poppins-Medium.ttf */; };
@@ -71,7 +71,7 @@
 		5709B34CF0A7D63546082F79 /* Pods-drinkApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drinkApp.release.xcconfig"; path = "Target Support Files/Pods-drinkApp/Pods-drinkApp.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-drinkApp-drinkAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drinkApp-drinkAppTests.debug.xcconfig"; path = "Target Support Files/Pods-drinkApp-drinkAppTests/Pods-drinkApp-drinkAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		66D23328AFE94B178201AC4B /* DancingScript-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DancingScript-Bold.ttf"; path = "../src/assets/fonts/Dancing_Script/DancingScript-Bold.ttf"; sourceTree = "<group>"; };
-		7751674329679164004EE704 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		774D773529684696007A5C42 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7AE06ED98F3B4FF0A6885719 /* Poppins-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Light.ttf"; path = "../src/assets/fonts/Poppins/Poppins-Light.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = drinkApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		851F1EB635A8450784945600 /* DancingScript-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DancingScript-Medium.ttf"; path = "../src/assets/fonts/Dancing_Script/DancingScript-Medium.ttf"; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 		13B07FAE1A68108700A75B9A /* drinkApp */ = {
 			isa = PBXGroup;
 			children = (
-				7751674329679164004EE704 /* GoogleService-Info.plist */,
+				774D773529684696007A5C42 /* GoogleService-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -322,7 +322,6 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				7751674429679164004EE704 /* GoogleService-Info.plist in Resources */,
 				DAD0EE7E82BA41EEB34C8FD6 /* Poppins-Black.ttf in Resources */,
 				9970B9EC2B474F3484215912 /* Poppins-BlackItalic.ttf in Resources */,
 				CF18048F4F1B48A6B34983E2 /* Poppins-Bold.ttf in Resources */,
@@ -333,6 +332,7 @@
 				059C00C4B21F44CD827EF637 /* Poppins-ExtraLightItalic.ttf in Resources */,
 				BE87DA96A552404B839E633A /* Poppins-Italic.ttf in Resources */,
 				73951D192BE84112B28BEDE8 /* Poppins-Light.ttf in Resources */,
+				774D773629684696007A5C42 /* GoogleService-Info.plist in Resources */,
 				B2D1E020E376410C8C63DCE9 /* Poppins-LightItalic.ttf in Resources */,
 				9037F2E6841740D4B4024D4D /* Poppins-Medium.ttf in Resources */,
 				D64B7AEF57D64109A3051BE6 /* Poppins-MediumItalic.ttf in Resources */,
