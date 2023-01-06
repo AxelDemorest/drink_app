@@ -4,6 +4,7 @@ import Home from '../views/Home';
 import Recipe from '../views/Recipe';
 import CustomDrawer from '../others/CustomDrawer';
 import Categories from '../views/Categories';
+import Login from "../views/Login";
 
 const Drawer = createDrawerNavigator();
 
@@ -31,7 +32,7 @@ const DrawerNavigator = () => {
         options={{drawerLabel: 'Catégories'}}
       />
       <Drawer.Screen name="Cocktail2" component={Recipe} />
-      <Drawer.Screen name="Cocktail3" component={Recipe} />
+      <Drawer.Screen name="Login" component={Login} />
       <Drawer.Screen name="Cocktail4" component={Recipe} />
     </Drawer.Navigator>
   );
